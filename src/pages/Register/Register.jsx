@@ -44,6 +44,25 @@ export const RegisterPage = () => {
                 </label>
               </div>
 
+              {/* <!-- UserType input --> */}
+              <div className="form-outline mb-4">
+                <select className="form-control" name="userType">
+                  <option
+                    value=""
+                    disabled
+                    selected
+                    style={{ textAlign: "center" }}
+                  >
+                    Select User Type
+                  </option>
+                  <option value="buyer">Buyer</option>
+                  <option value="seller">Seller</option>
+                </select>
+                <label className="form-label" htmlFor="registerName">
+                  User Type
+                </label>
+              </div>
+
               {/* <!-- Username input --> */}
               <div className="form-outline mb-4">
                 <input
