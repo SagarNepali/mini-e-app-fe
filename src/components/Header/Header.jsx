@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <div>
       <header>
-        <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+        <Navbar bg="light" variant="light" expand="lg" collapseOnSelect>
           <LinkContainer to="/">
             <Navbar.Brand style={{ float: "left" }}>GShop</Navbar.Brand>
           </LinkContainer>
