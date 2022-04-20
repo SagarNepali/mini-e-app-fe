@@ -1,4 +1,5 @@
 import { Button, Card, Col } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 export const Product = ({ product }) => {
@@ -7,6 +8,10 @@ export const Product = ({ product }) => {
   const showProductDetails = (product) => {
     navigate("/products/" + product.id);
   };
+
+  const cartSelector = useSelector((state) => state.cart);
+
+  const addToCart = (productParam) => {};
 
   return (
     <Card className="h-100 text-center p-4 rounded">
@@ -25,7 +30,9 @@ export const Product = ({ product }) => {
 
         <Card.Text className="mb-0">{product.title.substring(0, 20)}</Card.Text>
         <Card.Subtitle as="h3">${product.price}</Card.Subtitle>
-        <Button variant="dark">Add to cart</Button>
+        <Button variant="dark" onClick={() => addToCart(product)}>
+          Add to cart
+        </Button>
       </Card.Body>
     </Card>
   );
