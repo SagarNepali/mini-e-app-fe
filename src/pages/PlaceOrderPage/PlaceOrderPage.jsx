@@ -111,10 +111,15 @@ export const PlaceOrderPage = () => {
                   <ListGroup.Item key={index}>
                     <Row>
                       <Col md={1}>
-                        <Image src={item.image} alt={item.name} fluid rounded />
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fluid
+                          rounded
+                        />
                       </Col>
                       <Col>
-                        <Link to={`/product/${item.product}`}>{item.name}</Link>
+                        <Link to={`/products/${item.id}`}>{item.title}</Link>
                       </Col>
                       <Col md={4}>
                         {item.qty} x ${item.price} = ${item.qty * item.price}
